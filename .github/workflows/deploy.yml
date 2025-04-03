@@ -23,6 +23,7 @@ jobs:
         run: |
           echo "VITE_ENV=${{ secrets.VITE_ENV }}" >> .env.production
           echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> .env.production
+          echo "VITE_BASE=${{secrets.VITE_BASE}}" >> .env.production
 
       - name: Install dependencies
         run: npm install
