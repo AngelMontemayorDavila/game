@@ -5,7 +5,7 @@ import path from 'path'
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd());
     return {
-        base: `/angelmontemayordavila/game`,
+        base: `/game/`,
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, 'src'),
