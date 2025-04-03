@@ -2,7 +2,10 @@ import './style.css'
 import { io } from "socket.io-client";
 import Box from "@/box.js"
 import Vector from "@/vector.js";
+import get_logger from "@/core/logger.js";
 
+
+const logger = get_logger("MAIN");
 
 document.querySelector('#app').innerHTML = `
 <div>
@@ -10,15 +13,18 @@ document.querySelector('#app').innerHTML = `
 <div/>
 `;
 
-const socket = io(import.meta.env.VITE_API_URL);
+const api_url = import.meta.env.VITE_API_URL;
+const socket = io(api_url);
 const canvas = document.getElementById('game');
+
+logger.debug(`Socket server set from ${api_url}`)
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const context = canvas.getContext('2d');
 const box = new Box(50, 50, 50, 50, '#646cff');
-const box2 = new Box(40, 40, 50, 50, '#FFFFFF');
+const box2 = new Box(40, 40, 50, 50, '#ff0000');
 
 const speed = 200;
 let lastTime = 0;

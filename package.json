@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config vite.config.js --mode developer",
+    "devlocal": "vite --config vite.config.js --mode developer --host",
     "build": "vite build --mode production",
     "preview": "vite preview"
   },
