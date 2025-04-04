@@ -1,5 +1,8 @@
 {
-  "name": "frontend",
+  "name": "cosmonavt-frontend",
+  "author": "Angel Montemayor Davila",
+  "license": "MIT",
+  "description": "Cosmonavt multiplayer base example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
